@@ -55,7 +55,7 @@ const careerSchema = new mongoose.Schema({
 
     },
     What_is_your_current_monthly_salary_remuneration:{
-        type:String,
+        type:Number,
     },
     if_selected_how_soon_can_you_join_us:{
         type: String,
