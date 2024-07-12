@@ -3,6 +3,7 @@ const app = express();
 const db = require('./db')
 const bodyParser = require('body-parser')
 app.use(bodyParser.json())
+require('dotenv').config()
 
 
 app.get('/',(req,res)=>{
@@ -18,7 +19,8 @@ app.use('/franchise',franchiseroutes)
 const careerroutes = require('./routes/careerroutes')
 app.use('/career',careerroutes)
 
+const PORT = process.env.PORT || 8003
 
-app.listen(8003,()=>{
+app.listen(PORT,()=>{
     console.log("server listening on port 8003");
 })
